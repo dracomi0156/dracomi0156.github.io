@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #EEE;
+        }
+
+        .scene {
+        width: 600px;
+        height: 450px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #8aa;
+        position: relative;
+        }
+        .scene .message {
+        position: absolute;
+        color: #fff;
+        top: 20px;
+        left: 40px;
+        font-size: 50px;
+        font-family: Noto Sans JP, sans-serif;
+        opacity: 0;
+        }
+        .scene .person {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        }
+        .scene .person .hairs {
+        position: relative;
+        z-index: 1;
+        }
+        .scene .person .hairs .hair1 {
+        width: 80px;
+        height: 90px;
+        border-radius: 40px;
+        background-color: #fff;
+        position: absolute;
+        margin-top: -110px;
+        margin-left: -20px;
+        box-shadow: inset -10px -10px rgba(0, 0, 0, 0.1);
+        }
+        .scene .person .hairs .hair2 {
+        width: 80px;
+        height: 100px;
+        border-radius: 40px;
+        background-color: #fff;
+        position: absolute;
+        margin-top: -135px;
+        margin-left: 30px;
+        box-shadow: inset -10px -10px rgba(0, 0, 0, 0.1);
+        }
+        .scene .person .hairs .hair3 {
+        width: 80px;
+        height: 100px;
+        border-radius: 40px;
+        background-color: #fff;
+        position: absolute;
+        margin-top: -145px;
+        margin-left: 70px;
+        box-shadow: inset -10px -10px rgba(0, 0, 0, 0.1);
+        }
+        .scene .person .hairs .hair4 {
+        width: 80px;
+        height: 100px;
+        border-radius: 40px;
+        background-color: #fff;
+        position: absolute;
+        margin-top: -135px;
+        margin-left: 115px;
+        box-shadow: inset -5px -10px rgba(0, 0, 0, 0.1);
+        }
+        .scene .person .hairs .hair5 {
+        width: 80px;
+        height: 90px;
+        border-radius: 40px;
+        background-color: #fff;
+        position: absolute;
+        margin-top: -110px;
+        margin-left: 165px;
+        box-shadow: inset -3px -10px rgba(0, 0, 0, 0.1);
+        }
+        .scene .person .body {
+        width: 220px;
+        height: 200px;
+        border-radius: 100px;
+        background-color: #fc4;
+        box-shadow: inset -8px -10px rgba(0, 0, 0, 0.1);
+        }
+        .scene .person .body .eyes {
+        display: inline-block;
+        margin-top: -10px;
+        }
+        .scene .person .body .eyes .eye {
+        margin-right: 5px;
+        margin-left: 25px;
+        display: inline-block;
+        background-color: #fff;
+        width: 40px;
+        height: 18px;
+        border-radius: 9px;
+        margin-top: 100px;
+        }
+        .scene .person .body .eyes .eye .eyeball {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        border-radius: 9px;
+        background-color: #000;
+        }
+        .scene .person .body .mouth {
+        width: 45px;
+        height: 20px;
+        border-radius: 10px;
+        margin-left: 90px;
+        margin-top: 20px;
+        display: inline-block;
+        background-color: #ff172e;
+        }
+        .scene .person .body .blushs .blush1 {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        margin-left: 30px;
+        margin-top: -40px;
+        background-color: #ff7f6f;
+        }
+        .scene .person .body .blushs .blush2 {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        margin-left: 150px;
+        margin-top: -40px;
+        background-color: #ff7f6f;
+        }
+
+        .scene .message {
+        transition: 2s;
+        transition-delay: 0.8s;
+        }
+
+        .person {
+        transition: 0.5s;
+        }
+        .person .body {
+        transition: 0.5s;
+        }
+        .person * {
+        transition: 0.5s;
+        }
+
+        .scene:hover .message {
+        opacity: 1;
+        }
+        .scene:hover .person {
+        margin-top: 80px;
+        }
+        .scene:hover .person .body {
+        box-shadow: inset -8px -10px rgba(0, 0, 0, 0.1), 30px 10px rgba(0, 0, 0, 0.1);
+        }
+        .scene:hover .person:hover .body {
+        box-shadow: -30px 10px rgba(0, 0, 0, 0.1);
+        transform: translateX(40px);
+        }
+        .scene:hover .person:hover .hairs {
+        transform: translateX(40px);
+        }
+        .scene:hover .person:hover .eyes {
+        transform: translateX(30px);
+        }
+        .scene:hover .person:hover .eyeball {
+        transform: translateX(25px);
+        }
+        .scene:hover .person:hover .mouth {
+        transform: translateX(10px);
+        }
+        .scene:hover .person:hover .blushs {
+        transform: translateX(10px);
+        }
+
+        .scene:active .person {
+        transform: scale(0.9);
+        }
+
+        .person:active .hair1 {
+        transform: translateY(-25px);
+        }
+        .person:active .hair2 {
+        transform: translateY(-27px);
+        }
+        .person:active .hair3 {
+        transform: translateY(-29px);
+        }
+        .person:active .hair4 {
+        transform: translateY(-32px);
+        }
+        .person:active .hair5 {
+        transform: translateY(-35px);
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    
+    <div class="scene">
+        <div class="message">Ah...</div>
+        <div class="person">
+        <div class="hairs">
+            <div class="hair1"></div>
+            <div class="hair2"></div>
+            <div class="hair3"></div>
+            <div class="hair4"></div>
+            <div class="hair5"></div>
+        </div>
+        <div class="body">
+            <div class="eyes">
+            <div class="eye">
+                <div class="eyeball"></div>
+            </div>
+            <div class="eye">
+                <div class="eyeball"></div>
+            </div>
+            </div>
+            <div class="mouth"></div>
+            <div class="blushs">
+            <div class="blush1"></div>
+            <div class="blush2"></div>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+</body>
+</html>
