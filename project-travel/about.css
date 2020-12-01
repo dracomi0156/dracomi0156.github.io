@@ -76,6 +76,21 @@ body{
 }
 
 
+a.btn{
+    max-width: 220px;
+    text-align: center;
+    background-color: #965738;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    padding: 18px 20px;
+    margin: 0 auto 90px;
+    border-radius: 50px;
+}
+a.btn:hover{
+    background-color: rgba(255,200,0 ,.9);
+}
 @keyframes slide {
     0%{ left: 0; }
     10%{ left: -100%; }
