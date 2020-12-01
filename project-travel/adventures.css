@@ -1,0 +1,758 @@
+
+body{
+    color: #555;
+}
+
+
+img{
+    width: 100%;
+    vertical-align: middle;
+}
+p{
+    line-height: 1.4;
+    letter-spacing: 1px;
+}
+.main-banner p{
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+
+@media (max-width:767px){
+    .old-town{
+        margin: 60px 0;
+    }
+    .old-town .container{
+        width: 100%;
+        margin: auto;
+    }
+    /*-----item模組------*/
+    .main-item{
+        font-size: 0;
+        box-sizing: border-box;
+        margin: 0 10% 5%;
+    }
+    .main-item .txt{
+        width: 100%;
+        vertical-align: middle;
+    }
+    .main-item .txt h2{
+        font-size: 40px;
+        margin-bottom: 2%;
+    }
+    .main-item .txt span{
+        font-size: 26px;
+    }
+    .main-item .txt p{
+        font-size: 16px;
+        margin-bottom: 4%;
+    }
+    .main-item .pic{
+        width: 100%;
+        vertical-align: middle;
+    }
+    .main-item .pic img{
+        width: 100%;
+    }
+
+
+    /* old-town   hyeju 共用  item-group(一列3格) */
+    .item-group{
+        margin: 0 10% 100px;
+    }
+    .item-group .item{
+        position: relative;
+        width: 100%;
+        margin-bottom: 5%;
+    }
+    .item-group .item:hover .txt{
+        opacity: 1;
+        transition: .4s;
+    }
+    .item-group .item .txt{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        color: #fff;
+        background-color: rgba(0,0,0, .5);
+        font-size: 18px;
+        letter-spacing: 1px;
+        line-height: 1.4;
+        opacity: 0;
+        transition: .4s;
+    }
+    .item-group .item .txt .date{
+        margin-top: 26%;
+    }
+    .item-group .item .pic{
+            width: 100%;
+    }
+
+        
+    .firework .container{
+        width: 100%;
+        margin: auto;
+    }
+    .firework .item{
+        margin: 0 10% 100px;
+        position: relative;
+    }
+    .firework .item .txt{
+        position: absolute;
+        bottom: 12%;
+        left: 7%;
+        color: rgba(255,255,255, .95);
+        font-size: 26px;
+        font-weight: 700;
+    }
+    .firework .item .txt .date{
+        letter-spacing: 2px;
+        line-height: 1.5;
+        font-size: 20px;
+    }
+    .firework .item .txt p{
+        width: 80%;
+        letter-spacing: 3px;
+        line-height: 1.3;
+    }
+    .firework .item .txt span{
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+
+    .gray-city{
+        margin-bottom: 80px;
+    }
+    .gray-city .container{
+        max-width: 1200px;
+        width: 100%;
+        margin: auto;
+    }
+    .gray-city .main-item .txt{
+        width: 100%;
+        margin-bottom: 5%;
+    }
+    .gray-city .main-item .txt h2{
+        font-size: 40px;
+    }
+    .gray-city .main-item .txt span{
+        font-size: 20px;
+    }
+    .gray-city .main-item .txt p{
+        font-size: 16px;
+    }
+    .gray-city .main-item .pic{
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 4%;
+    }
+
+
+    .sub-banner{
+        width: 100%;
+        position: relative;
+    }
+    .sub-banner .container{
+        max-width: 1400px;
+        margin: auto;
+        display: flex;
+    }
+    .sub-banner{
+        position: relative;
+    }
+    .sub-banner h2{
+        color: rgba(255, 255, 255, 1);
+        font-size: 22px;
+        position: absolute;
+        bottom: 10%;
+        right: 6%;
+        z-index: 1;
+        letter-spacing: 2px;
+        font-weight: 700;
+        line-height: 1.4;
+    }
+    .sub-banner .pic{
+        position: relative;
+    }
+
+
+    .sunset{
+        /* margin-bottom: 100px; */
+        padding: 60px 0 80px;
+        background-color: #f1f1f1;
+    }
+    .sunset .container{
+        width: 80%;
+        margin: auto;
+    }
+    .sunset .item-row-2{
+        width: 100%;
+        align-self: flex-end;
+        margin-bottom: 5%;
+    }
+    .sunset .item{
+        width: 100%;
+    }
+    .sunset .item-row-2 .txt{
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    .sunset .item-row-2 .txt h2{
+        font-size: 48px;
+        padding-bottom: 3%;
+        margin-bottom: 4%;
+        border-bottom: 1px solid #555;
+    }
+    .sunset .item-row-2 .txt p{
+        font-size: 16px;
+        letter-spacing: 1px;
+        line-height: 1.5;
+        margin-bottom: 4%;
+    }
+    
+
+    .hyeju{
+        padding: 60px 0 5px;
+        background-color: #f1f1f1;
+        margin-bottom: 90px;
+    }
+    .hyeju .container{
+        width: 100%;
+        margin: auto;
+    }
+    
+    
+    .snow .container{
+        width: 100%;
+        margin: auto;
+    }
+    .snow .main-item{
+    }
+    .snow .main-item .pic{
+        width: 100%;
+        margin-left: 0;
+    }
+    .snow .main-item .txt{
+        color: #555;
+        text-align: center;
+    }
+    .snow .main-item h2{
+        font-size: 30px;
+    }
+    .snow .main-item h3{
+        font-size: 20px;
+        margin-bottom: 3%;
+    }
+    .snow .main-item p{
+        font-size: 16px;
+    }
+
+    .snow .item-group{
+        flex-wrap: wrap;
+    }
+    .snow .item-group .item{
+        margin-bottom: 5%;
+    }
+    .snow .item-group .item.for-computer{
+        display: none;
+    }
+
+
+    .drawing-banner .pic h2{
+        color: rgba(255,200,0 ,.9);
+        bottom: 15%;
+    }
+    
+    .scene{
+        padding: 60px 0 0;
+        /* background-color: #f1f1f1; */
+    }
+    .scene .container{
+        width: 100%;
+        margin: auto;
+    }
+    .scene .main-item .txt{
+        width: 100%;
+    }
+    .scene .main-item .txt h2{
+        font-size: 40px;
+    }
+    .scene .main-item .pic{
+        width: 100%;
+    }
+    .scene .item-group .item{
+        width: 100%;
+    }
+    .scene .item-group .item .txt p{
+        margin-top: 32%;
+    }
+
+    .portrait{
+        background-color: #f1f1f1;
+        padding: 60px 0 60px;
+    }
+    .portrait .container{
+        width: 100%;
+        margin: auto;
+        color: #555;
+    }
+  
+    .portrait .main-item .pic{
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 5%;
+    }
+    .portrait .main-item .txt{
+        width: 100%;
+        margin-bottom: 10%;
+    }
+    
+    .portrait .intro-group{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 10%;
+    }
+    
+    /* intro 沒有高度 */
+    .portrait .intro-group .intro{
+        width: 100%;
+        position: relative;
+        /* outline: blue solid 3px; */
+        padding-bottom: 105%;
+    }
+    .portrait .intro .pic-group{
+        position: absolute;
+        width: 100%;
+        padding-top: 100%;  /* 正方形比例 */
+        perspective: 1000px;
+        margin: auto;
+    }
+    .portrait .intro .pic-group .pic{
+        width: 86%;
+        margin: 7%;
+        border-radius:  500px;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        transition: .4s;
+        box-shadow: 3px 3px 10px rgba(0,0,0, .1);
+    }
+    .portrait .intro .pic-group .pic-front{
+        transform: rotateY(0deg);
+    }
+    .portrait .intro .pic-group .pic-back{
+        transform: rotateY(180deg);
+    }
+    
+    .portrait .intro .pic-group:hover .pic-front{
+        transform: rotateY(180deg);
+    }
+    .portrait .intro .pic-group:hover .pic-back{
+        transform: rotateY(360deg);
+    }
+    .portrait .intro-group .intro .txt{
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+        position: absolute;
+        margin-top: 98%;
+    }
+    .portrait .intro-group .intro .txt:hover{
+        /* background-color: #763718; */
+    }
+    .portrait .intro-group .intro .txt h3{
+        font-size: 22px;
+        position: relative;
+        line-height: 1.5;
+    }
+    .portrait .intro-group .intro .txt p{
+        font-size: 16px;
+        line-height: 1.6;
+        padding-bottom: 18px;
+    }
+
+
+}
+@media (min-width:768px){
+
+    .old-town{
+        margin: 100px 0;
+    }
+    .old-town .container{
+        max-width: 1200px;
+        width: 100%;
+        margin: auto;
+    }
+    /*-----item模組------*/
+    .main-item{
+        font-size: 0;
+        box-sizing: border-box;
+        margin: 0 10% 80px;
+
+    }
+    .main-item .txt{
+        display: inline-block;
+        width: 60%;
+        /* margin-left: 15%; */
+        vertical-align: middle;
+    }
+    .main-item .txt h2{
+        font-size: 50px;
+        line-height: 1.4;
+    }
+    .main-item .txt span{
+        font-size: 30px;
+    }
+    .main-item .txt p{
+        font-size: 16px;
+    }
+    .main-item .pic{
+        display: inline-block;
+        width: 30%;
+        margin-left: 10%;
+        vertical-align: middle;
+    }
+    .main-item .pic img{
+        width: 100%;
+    }
+
+
+
+    /* old-town   hyeju 共用  item-group(一列3格) */
+    .item-group{
+        margin: 0 10% 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .item-group .item{
+        position: relative;
+        width: 30%;
+    }
+    .item-group .item:hover .txt{
+        opacity: 1;
+        transition: .4s;
+    }
+    .item-group .item .txt{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        color: #fff;
+        background-color: rgba(0,0,0, .5);
+        font-size: 18px;
+        letter-spacing: 1px;
+        line-height: 1.4;
+        opacity: 0;
+        transition: .4s;
+    }
+    .item-group .item .txt .date{
+        margin-top: 26%;
+    }
+    .item-group .item .pic{
+        width: 100%;
+    }
+
+    
+    .firework .container{
+        max-width: 1200px;
+        width: 100%;
+        margin: auto;
+    }
+    .firework .item{
+        margin: 0 10% 100px;
+        position: relative;
+    }
+    .firework .item .txt{
+        position: absolute;
+        bottom: 23%;
+        left: 7%;
+        color: rgba(255,255,255, 1);
+        font-size: 46px;
+        font-weight: 700;
+    }
+    .firework .item .txt .date{
+        letter-spacing: 4px;
+        line-height: 1.5;
+    }
+    .firework .item .txt p{
+        width: 50%;
+        letter-spacing: 3px;
+    }
+    .firework .item .txt span{
+        font-size: 24px;
+        letter-spacing: 2px;
+    }
+
+
+    .gray-city .container{
+        max-width: 1200px;
+        width: 100%;
+        margin: auto;
+    }
+    .gray-city .main-item .txt{
+        width: 30%;
+        margin: 0 5%;
+    }
+    .gray-city .main-item .txt h2{
+    }
+    .gray-city .main-item .txt span{
+        font-size: 22px;
+    }
+    .gray-city .main-item .txt p{
+        /* font-size: 16px; */
+    }
+    .gray-city .main-item .pic{
+        width: 30%;
+        margin-left: 0;
+    }
+
+
+    .sub-banner{
+        width: 100%;
+        position: relative;
+    }
+    .sub-banner .container{
+        max-width: 1400px;
+        margin: auto;
+        display: flex;
+    }
+    .sub-banner img{}
+    .sub-banner{
+        position: relative;
+    }
+    .sub-banner h2{
+        color: rgba(255, 255, 255, 1);
+        font-size: 22px;
+        position: absolute;
+        bottom: 10%;
+        right: 6%;
+        z-index: 1;
+        letter-spacing: 2px;
+        font-weight: 700;
+        line-height: 1.4;
+    }
+    .sub-banner .pic{
+        position: relative;
+    }
+
+
+    .sunset{
+        /* margin-bottom: 100px; */
+        padding: 100px 0 150px;
+        background-color: #f1f1f1;
+    }
+    .sunset .container{
+        max-width: 1200px;
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+    .sunset .item-row-2{
+        width: 58%;
+        align-self: flex-end;
+    }
+    .sunset .item{
+        width: 34%;
+    }
+    .sunset .item-row-2 .txt{
+        width: 58%;
+        padding: 0 20px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+    }
+    .sunset .item-row-2 .txt h2{
+        font-size: 48px;
+        padding-bottom: 3%;
+        margin-bottom: 4%;
+        border-bottom: 1px solid #555;
+    }
+    .sunset .item-row-2 .txt p{
+        font-size: 16px;
+        letter-spacing: 1px;
+        line-height: 1.5;
+    }
+    
+
+    .hyeju{
+        padding: 100px 0 80px;
+        background-color: #f1f1f1;
+        margin-bottom: 100px;
+    }
+    .hyeju .container{
+        max-width: 1200px;
+        width: 100%;
+        margin: auto;
+    }
+    
+    
+    .snow .container{
+        max-width: 1200px;
+        width: 100%;
+        margin: auto;
+    }
+    .snow .main-item{
+        position: relative;
+    }
+    .snow .main-item .pic{
+        width: 100%;
+        margin-left: 0;
+    }
+    .snow .main-item .txt{
+        position: absolute;
+        bottom: 7%;
+        right: 6%;
+        color: #fff;
+        text-align: right;
+    }
+    .snow .main-item h3{
+        font-size: 28px;
+    }
+    .snow .item-group{
+        flex-wrap: wrap;
+    }
+    .snow .item-group .item{
+        margin-bottom: 5%;
+    }
+    .snow .item-group .item.for-phone{
+        display: none;
+    }
+
+
+    .drawing-banner .pic h2{
+        color: rgba(255,200,0 ,.9);
+        bottom: 15%;
+    }
+    
+    .scene{
+        padding: 100px 0 0;
+        /* background-color: #f1f1f1; */
+    }
+    .scene .container{
+        max-width: 1200px;
+        width: 100%;
+        margin: auto;
+    }
+    .scene .main-item .txt{
+        width: 35%;
+    }
+    .scene .main-item .pic{
+        width: 55%;
+    }
+    .scene .item-group .item{
+        width: 33%;
+    }
+    .scene .item-group .item .txt p{
+        margin-top: 33%;
+    }
+
+    .portrait{
+        background-color: #f1f1f1;
+        padding: 80px 0;
+    }
+    .portrait .container{
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        color: #555;
+    }
+    .portrait .main-item{
+    }
+    .portrait .main-item .pic{
+        width: 35%;
+        margin-left: 0;
+    }
+    .portrait .main-item .txt{
+        width: 45%;
+        margin-left: 10%;
+    }
+    
+    .portrait .intro-group{
+        margin-bottom: 21%;
+        display: flex;
+        padding: 0 10%;
+    }
+    
+    /* intro 沒有高度 */
+    .portrait .intro-group .intro{
+        width: 33.333%;
+        position: relative;
+        /* outline: blue solid 3px; */
+    }
+    .portrait .intro .pic-group{
+        position: absolute;
+        width: 100%;
+        padding-top: 100%;  /* 正方形比例 */
+        perspective: 1000px;
+    }
+    .portrait .intro .pic-group .pic{
+        width: 86%;
+        margin: 7%;
+        border-radius:  500px;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        transition: .4s;
+        box-shadow: 3px 3px 10px rgba(0,0,0, .1);
+    }
+    .portrait .intro .pic-group .pic-front{
+        transform: rotateY(0deg);
+    }
+    .portrait .intro .pic-group .pic-back{
+        transform: rotateY(180deg);
+    }
+    
+    .portrait .intro .pic-group:hover .pic-front{
+        transform: rotateY(180deg);
+    }
+    .portrait .intro .pic-group:hover .pic-back{
+        transform: rotateY(360deg);
+    }
+    .portrait .intro-group .intro .txt{
+        width: 80%;
+        text-align: center;
+        box-sizing: border-box;
+        position: absolute;
+        margin-top: 98%;
+    }
+    .portrait .intro-group .intro .txt:hover{
+        /* background-color: #763718; */
+    }
+    .portrait .intro-group .intro .txt h3{
+        font-size: 22px;
+        position: relative;
+        line-height: 1.5;
+    }
+    .portrait .intro-group .intro .txt p{
+        font-size: 16px;
+        line-height: 1.6;
+        padding-bottom: 18px;
+    }
+    .portrait .pic-group{
+        width: 90%;
+        margin: auto;
+    }
+
+}
+
+
+/* *{ outline: 1px solid red;} */

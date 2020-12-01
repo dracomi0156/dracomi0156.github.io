@@ -1,0 +1,574 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: 'Karla', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+html, body, .container{
+    width: 100%;
+}
+body{
+    position: relative;
+}
+.main-header{
+    width: 100%;
+    background-color: rgba(255,255,255, 1);
+    z-index: 2;
+}
+.main-header #menu-switch{
+    display: none;
+}
+
+/* -----共用 main-banner-- */
+.main-banner{
+    width: 100%;
+    position: relative;
+}
+.main-banner .container{
+    position: relative;
+    max-width: 1400px;
+    margin: auto;
+}
+.main-banner img{
+    width: 100%;
+    vertical-align: middle;
+}
+
+/* ---------共用 intro-------- */
+.intro{
+    width: 100%;
+    box-sizing: border-box;
+}
+.intro .container{
+    color: #555;
+    box-sizing: border-box;
+}
+
+
+/* ------共用map--------- */
+.map img{
+    width: 100%;
+    vertical-align: middle;
+}
+.map .txt p{
+    line-height: 1.3;
+}
+/* --------共用 map---------------- */
+.map .sub-txt .container{
+    font-size: 0;
+    box-sizing: border-box;
+}
+.map .sub-txt .item{
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+}
+.map .sub-txt .number{
+    color: #EB6137;
+}
+.map .sub-txt .unit{
+    color: #965738;
+}
+
+
+@keyframes slide {
+    0%{ left: 0; }
+    10%{ left: -100%; }
+    33.3%{ left: -100%; }
+    43.3%{ left: -200%; }
+    66.6%{ left: -200%; }
+    76.6%{ left: -300%; }
+    100%{ left: -300%; }
+}
+
+
+@media (max-width:767px){
+    .main-header{
+        position: fixed;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .main-header .logo{
+        color: #fff;
+        width: 150px; 
+        display: block;
+    }
+    .main-header .logo img{
+        width: 100%;
+        vertical-align: middle;
+    }
+    .main-header .main-nav{
+        position: absolute;
+        top: 0;
+        right: -100%;
+        opacity: 0;
+        width: 80%;
+        height: 100vh;
+        background-color: rgba(68, 30, 13, .96);
+        padding: 15px 0;
+        box-sizing: border-box;
+        transition: .4s;
+    }
+    .main-header #menu-switch:checked ~ .main-nav{
+        display: block;
+        opacity: 1;
+        right: 0;
+        transition: .4s;
+    }
+    .main-header .main-nav li a{
+        display: block;
+        color: #fff;
+        padding: 15px 20px;
+    }
+    .main-header .main-nav li a:hover{
+        background-color: #F8E9D1;
+        color: #965738 ;
+    }
+    .main-header .menu-control{
+        position: absolute;
+        top: 38%;
+        left: 90%;
+        border-radius: 2px;
+        transition: .4s;
+    }
+    .main-header .menu-control:hover{
+        cursor: pointer;
+    }
+    .main-header .menu-control span{
+        display: block;
+        width: 26px;
+        height: 2px;
+        border-radius: 9px;
+        margin-bottom: 8px;
+        background-color: #864728;
+    }
+    .main-header #menu-switch:checked ~ .menu-control{
+        top: 32%;
+        left: calc(20% - 35px);
+        width: 35px;
+        height: 35px;
+        background-color: #000;
+        transition: .5s ; /* 時間差 */
+    }
+    .main-header #menu-switch:checked ~ .menu-control span:nth-child(1){
+        background-color: #fff;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 16px;
+        left: 5px;
+    }
+    .main-header #menu-switch:checked ~ .menu-control span:nth-child(2){
+        display: none;
+    }
+    .main-header #menu-switch:checked ~ .menu-control span:nth-child(3){
+        background-color: #fff;
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 16px;
+        left: 5px;
+    }
+    
+
+
+    /* ------------手機-main-banner----------- */
+    /* 都設在共用區塊 */
+    .main-banner{
+        padding-top: 90px;
+    }
+    .main-banner p{
+        color: rgba(255, 255, 255, .95);
+        font-size: 1.8vw;
+        width: 10%;
+        position: absolute;
+        bottom: 7%;
+        right: 6%;
+        z-index: 1;
+        letter-spacing: 1px;
+        line-height: 1.4;
+
+    }
+/* *{outline: 1px solid red;} */
+    /* ------------手機 intro --------------------- */
+    .intro{
+        margin-bottom: 80px;
+    }
+    .intro .container{
+        width: 100%;
+        padding: 0 10%;
+        margin: 80px auto;
+        /* padding: 0 30px; */
+    }
+    .intro .pic{
+        width: 50%;
+        margin: auto;
+        margin-bottom: 5%;
+    }
+    .intro .txt{
+        width: 80%;
+        margin: auto;
+        position: relative;
+        letter-spacing: 1px;
+        line-height: 1.3;
+        vertical-align: middle;
+    }
+    .intro .txt p{
+        margin-bottom: 10px;
+    }
+    .intro .pic img{
+        width: 100%;
+        vertical-align: middle;
+    }
+    .intro h2{
+        font-size: 50px;
+        font-weight: 700;
+        text-align: center;
+        padding: 0;
+        color: rgba(255,200,0 ,.8);
+        margin-bottom: 3%;
+    }
+
+
+/* view---------- */
+    .view{
+        padding: 60px 0 100px;
+        margin-bottom: 120px;
+        background-color: #f1f1f1;
+    }
+    .view .container{
+        width: 100%;
+        padding: 0 10%;
+        box-sizing: border-box;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .view .container .pic{
+        width: 90%;
+    }
+    .view .container .pic img{
+        width: 100%;
+        vertical-align: middle;
+    }
+    .view .container .txt{
+        width: 90%;
+        font-size: 18px;
+        position: relative;
+    }
+    .view .container .txt h2{
+        width: 80%;
+        color: rgba(255,200,0 ,.8);
+        font-size: 40px;
+        letter-spacing: 1px;
+        line-height: 1.5;
+        margin-bottom: 1%;
+    }
+    .view .container .txt p{
+        letter-spacing: 1px;
+        line-height: 1.3;
+        color: #555;
+        margin-bottom: 4%;
+    }
+    
+    /* ---------------手機 map */
+ 
+    .map{
+        color: #655;
+        margin-bottom: 100px;
+    }
+    .map .container{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        box-sizing: border-box;
+        position: relative;
+        padding-bottom: 120px;
+    }
+    .map .pic{
+        width: 100%;
+        margin-top: 6%;
+    }
+    .map .txt{
+        width: 100%;
+    }
+    .map .txt .time{
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+    .map .txt h2{
+        font-size: 40px;
+        margin-bottom: 26px;
+        position: relative;
+        /* color: rgba(255,200,0 ,.9); */
+    }
+    .map .txt h2::after{
+        content: '';
+        width: 100%;
+        height: 1px;
+        /* background-color: #655; */
+        background-color: rgba(255,200,0 ,.9);
+        position: absolute;
+    }
+    .map .txt h2::after{
+        bottom: -13%;
+        left: 0;
+    }
+    .map .txt p{
+        letter-spacing: 1px;
+        line-height: 1.4;
+    }
+
+    .map .sub-txt{
+        font-size: 0;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+    .map .sub-txt .item{
+        /* width: 100%; */
+        width: 33.333333%;
+    }
+    .map .sub-txt .number{
+        font-size: 44px;
+    }
+    .map .sub-txt .unit{
+        font-size: 18px;
+    }
+
+    .footer p{
+        text-align: center;
+        line-height: 2;
+    }
+   
+    
+}
+/* *{outline: red 1px solid;} */
+@media (min-width: 768px){
+    .main-header{
+        /* position: relative; */
+        position: absolute;
+    }
+    .main-header .container{
+        max-width: 1200px;
+        margin: auto;
+        padding: 15px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .main-header .logo{
+        padding-bottom: 5px;
+        width: 160px;
+        display: block;
+    }
+    .main-header .logo img{
+        width: 100%;
+        vertical-align: middle;
+    }
+    .main-header .main-nav{
+        display: flex;
+    }
+    .main-nav li a{
+        display: inline-block;
+        margin-left: 35px;
+        letter-spacing: 2px;
+        font-size: 1vw;
+        color: rgba(0,0,0, 1);
+    }
+    .main-nav li a:hover{
+        color: #bbb;
+        /* background-color: #EB6137; */
+    }
+    .main-header .menu-control{
+        display: none;
+    }
+
+    /* ---------------banner---------------- */
+    /* 都設在共用區塊 */
+    .main-banner p{
+        color: rgba(255, 255, 255, .95);
+        font-size: 22px;
+        width: 110px;
+        position: absolute;
+        bottom: 7%;
+        right: 7.5%;
+        z-index: 1;
+        letter-spacing: 1px;
+        line-height: 1.4;
+    }
+    /* ----------------intro--------------------- */
+    .intro{
+        margin-bottom: 150px;
+    }
+    .intro .container{
+        max-width: 1200px;
+        margin: 100px auto;
+        /* padding: 0 30px; */
+    }
+    .intro .pic{
+        display: inline-block;
+        width: 20%;
+        margin-left: 10%;
+    }
+    .intro .txt{
+        display: inline-block;
+        width: 50%;
+        margin-left: 10%;
+        position: relative;
+        letter-spacing: 1px;
+        line-height: 1.3;
+        vertical-align: middle;
+    }
+    .intro .txt p{
+        margin-bottom: 10px;
+    }
+    .intro .pic img{
+        width: 100%;
+        vertical-align: middle;
+    }
+    .intro h2{
+        font-size: 50px;
+        font-weight: 700;
+        text-align: left;
+        padding: 0;
+        /* position: absolute;
+        top: -10%;
+        left: 0;
+        z-index: -1; */
+        color: rgba(255,200,0 ,.8);
+    }
+    
+    /* --------------view---------------- */
+   
+    .view{
+        padding: 50px 0;
+        margin-bottom: 120px;
+        background-color: #f1f1f1;
+    }
+    .view .container{
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        font-size: 0;
+    }
+    .view .container .pic{
+        width: 20%;
+        margin-left: 10%;
+        text-align: middle;
+        display: inline-block;
+    }
+    .view .container .pic img{
+        width: 100%;
+        vertical-align: middle;
+    }
+    .view .container .txt{
+        width: 35%;
+        vertical-align: middle;
+        display: inline-block;
+        font-size: 18px;
+        margin-left: 10%;
+    }
+    .view .container .txt h2{
+        /* width: 65%; */
+        color: rgba(255,200,0 ,.8);
+        font-size: 40px;
+        float: left;
+        letter-spacing: 1px;
+        line-height: 1.5;
+    }
+    .view .container .txt p{
+        /* width: 100%; */
+        letter-spacing: 1px;
+        line-height: 1.3;
+        color: #555;
+        float: left;
+    }
+    
+    /* ---------------map------------------- */
+    
+    .map{
+        color: #655;
+        margin-bottom: 120px;
+    }
+    .map .container{
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        box-sizing: border-box;
+    }
+    .map .pic{
+        width: 42%;
+        margin-left: 5%;
+    }
+    
+  
+    .map .txt{
+        width: 38%;
+        margin-left: 10%;
+        padding-top: 40px;
+    }
+    .map .txt .time{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .map .txt h2{
+        font-size: 50px;
+        margin-bottom: 40px;
+        position: relative;
+        /* color: rgba(255,200,0 ,.9); */
+    }
+    .map .txt h2::after{
+        content: '';
+        width: 100%;
+        height: 1px;
+        /* background-color: #655; */
+        background-color: rgba(255,200,0 ,.9);
+        position: absolute;
+    }
+    .map .txt h2::after{
+        bottom: -19%;
+        left: 0;
+    }
+    .map .txt p{
+        letter-spacing: 1px;
+        line-height: 1.4;
+    }
+
+    .map .sub-txt{
+        font-size: 0;
+        margin-left: -9%;
+    }
+
+    .map .sub-txt .item{
+        width: 33.333333%;
+        /* padding: 20px 0; */
+        margin-top: 10%;
+    }
+    .map .sub-txt .number{
+        font-size: 46px;
+        /* color: rgba(255,200,0 ,.9); */
+    }
+    .map .sub-txt .unit{
+        font-size: 18px;
+    }
+
+    .footer p{
+        text-align: center;
+        line-height: 2;
+    }
+    /* *{outline: 1px solid red;} */
+  
+
+}
+        @media (min-width: 1200px){
+            .main-header .main-nav li a{
+                font-size: 16px;
+            }
+        }
